@@ -1,0 +1,73 @@
+DAY 1 DATA QUALITY CHECK
+
+1. All 10 datasets loaded successfully.
+
+2. Dataset Shapes verified.
+
+3. Missing Values:
+   - Most datasets have no missing values.
+   - except: 
+     -FILE:04_monthly_sip_inflows[yoy_growth_pct] has 12 missing values
+     
+4. Duplicate Records:
+   - No duplicates found in any datasets.
+   
+
+5. Datatype Observations:
+   - Some date columns (launch_date, date) are stored as object datatype.
+   - These columns should be converted to datetime format before analysis.
+
+6. Recommendation:
+   - Convert date fields to datetime.
+
+7. Live NAV Fetch Status:
+    Successfully downloaded:
+    - SBI Bluechip
+    - Kotak Bluechip
+
+    Failed due to API Server Error (HTTP 502):
+    - ICICI Bluechip
+    - Nippon Large Cap
+    - Axis Bluechip
+
+    Note:
+    The failures were caused by the external API server.
+
+8. Fund Master Exploration
+Total Fund Houses:
+- 10
+
+Fund Houses:
+- SBI Mutual Fund
+- HDFC Mutual Fund
+- ICICI Prudential MF
+- Nippon India MF
+- Kotak Mahindra MF
+- Axis Mutual Fund
+- Aditya Birla Sun Life MF
+- UTI Mutual Fund
+- Mirae Asset MF
+- DSP Mutual Fund
+
+Categories:
+- Equity
+- Debt
+
+Sub-Categories:
+-['Large Cap' 'Small Cap' 'Gilt' 'Mid Cap' 'Short Duration' 'Value'
+ 'Liquid' 'Index/ETF' 'Flexi Cap' 'Index' 'Large & Mid Cap' 'ELSS']
+
+RISK CATEGORIES:
+-['Moderate' 'Very High' 'Low' 'High' 'Moderately High']
+
+9. AMFI Code Validation
+
+Total AMFI Codes in Fund Master: 40
+Total AMFI Codes in NAV History: 40
+
+Validation Result:
+- All AMFI codes from fund_master.csv are present in nav_history.csv.
+- No missing AMFI codes found.
+- Data relationship between the two datasets is valid.
+
+   
