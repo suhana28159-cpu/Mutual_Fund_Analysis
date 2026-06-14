@@ -1,3 +1,11 @@
+"""
+Mutual Fund Analytics Project
+
+Author: Suhana Begum
+
+Description:
+This script is part of the Bluestock Internship Project.
+"""
 import pandas as pd
 
 df = pd.read_csv("data/raw/01_fund_master.csv")

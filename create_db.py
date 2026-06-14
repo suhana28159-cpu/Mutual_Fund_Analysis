@@ -1,3 +1,11 @@
+"""
+Mutual Fund Analytics Project
+
+Author: Suhana Begum
+
+Description:
+This script is part of the Bluestock Internship Project.
+"""
 from sqlalchemy import create_engine
 
 engine = create_engine(
